@@ -35,4 +35,4 @@ jobs:
         ECR_REPOSITORY: docker_nodejs_demo
       run: |
         docker build . --file Dockerfile -t myip/master:latest -t myip/master:${{ github.sha }}
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker push 930354804502.dkr.ecr.us-east-1.amazonaws.com/docker_react_demo:myip/master:${{ github.sha }}
