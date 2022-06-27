@@ -7,6 +7,7 @@ function App() {
   useEffect(() => {
     internalIpV4().then((res) => {
       console.log(res);
+      console.log(res);
     })
   },[])
 
