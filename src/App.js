@@ -1,7 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import {internalIpV6, internalIpV4} from 'internal-ip';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    console.log(internalIpV4().then((res) => {
+      console.log(res);
+    }));
+  })
   return (
     <div className="App">
       <header className="App-header">
