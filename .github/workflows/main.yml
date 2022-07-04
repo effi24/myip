@@ -29,6 +29,6 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: docker_nodejs_demo
         run: |
-          AWS_REPO=930354804502.dkr.ecr.us-east-1.amazonaws.com/docker_react_demo
+          AWS_REPO=930354804502.dkr.ecr.us-east-1.amazonaws.com/nodejs-demo
           docker build . --file Dockerfile -t myip/master:latest -t myip/master:${{ github.sha }} -t ${AWS_REPO}:${{ github.sha }} -t ${AWS_REPO}:latest
-          docker push -a 930354804502.dkr.ecr.us-east-1.amazonaws.com/docker_react_demo
+          docker push -a 930354804502.dkr.ecr.us-east-1.amazonaws.com/nodejs-demo
